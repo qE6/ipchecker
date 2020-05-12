@@ -2,9 +2,8 @@
 IPChecker is small script for getting an IP information
 
 # Screenshots
-
-![2020-05-12_20-39](https://user-images.githubusercontent.com/47501225/81730670-8c6a3f80-9496-11ea-9c6b-200aa93db405.png)
 ![goods](https://user-images.githubusercontent.com/47501225/81730681-90965d00-9496-11ea-9dc3-6888b3072cc3.png)
+![2020-05-12_20-39](https://user-images.githubusercontent.com/47501225/81730670-8c6a3f80-9496-11ea-9c6b-200aa93db405.png)
 
 # Installation (Debian-based distro)
 ```
