@@ -6,7 +6,7 @@ import requests
 import json
 import sys
 from colorama import Fore, Style
-# import colorama  # uncommet this line on Windows
+# from colorama import init, deinit  # uncommet this line on Windows
 
 # Some really easy IP validator
 def isGoodIP(ip):
@@ -27,17 +27,17 @@ def getIPInfo(ipstr):
         req = requests.get("http://ip-api.com/json/" + ipstr)
         if req.status_code != 200:
             print(Fore.RED + Style.BRIGHT + "[-] Answer error!" + Style.RESET_ALL)
-            # colorama.deinit() # uncomment this line on Windows
+            # deinit() # uncomment this line on Windows
             exit(0)
     except:
         print(Fore.RED + Style.BRIGHT + "[-] Something went wrong!" + Style.RESET_ALL)
-        # colorama.deinit() # uncomment this line on Windows
+        # deinit() # uncomment this line on Windows
         exit(0)
 
     return req.text
 
 def main():
-    # colorama.init()  # uncomment this line on Windows
+    # init()  # uncomment this line on Windows
     if len(sys.argv) == 1:
         print(Fore.RED + Style.BRIGHT + "Usage: " + Style.RESET_ALL + sys.argv[0] + " <ip>")
         exit(0)
@@ -46,7 +46,7 @@ def main():
     if isGoodIP(ipstr) != True:
         print(Fore.RED + Style.BRIGHT + "[-] IP format error" + Style.RESET_ALL)
         exit(0)
-        # colorama.deinit() # uncomment this line on Windows
+        # deinit() # uncomment this line on Windows
 
     print("[*] Trying to get infromation about " + Style.BRIGHT + Fore.BLUE + ipstr + Style.RESET_ALL)
     result = json.loads(getIPInfo(str(ipstr)))
@@ -64,7 +64,7 @@ def main():
         print("\nInformation may contain inaccuracies.")
     else:
         print(Style.BRIGHT + Fore.RED + "[-] Failed." + Style.RESET_ALL)
-    # colorama.deinit() # uncomment this line on Windows
+    # deinit() # uncomment this line on Windows
 
 if __name__ == "__main__":
     main()
