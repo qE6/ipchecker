@@ -1,5 +1,5 @@
 # Coded by qE6.
-# Simple screen for getting information about IP address
+# Simple script for getting information about IP address
 # Script use ip-api.com
 
 import requests
