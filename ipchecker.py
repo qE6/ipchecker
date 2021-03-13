@@ -9,7 +9,7 @@ from colorama import Fore, Style
 # from colorama import init, deinit  # uncommet this line on Windows
 
 # Some really easy IP validator
-def isGoodIP(ip):
+def isGoodIP(ip=str):
     try:
         ipnums = ip.split(".")
         if len(ipnums) != 4:
@@ -22,7 +22,7 @@ def isGoodIP(ip):
         return False
 
 # Function for sending request to ip-api
-def getIPInfo(ipstr):
+def getIPInfo(ipstr=str):
     try:
         req = requests.get("http://ip-api.com/json/" + ipstr)
         if req.status_code != 200:
