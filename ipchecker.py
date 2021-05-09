@@ -40,6 +40,7 @@ def main():
     # init()  # uncomment this line on Windows
     if len(sys.argv) == 1:
         print(Fore.RED + Style.BRIGHT + "Usage: " + Style.RESET_ALL + sys.argv[0] + " <ip>")
+        # deinit() # uncomment this line on Windows
         exit(0)
     ipstr = sys.argv[1]
 
@@ -64,7 +65,7 @@ def main():
         print("\nInformation may contain inaccuracies.")
     else:
         print(Style.BRIGHT + Fore.RED + "[-] Failed." + Style.RESET_ALL)
-    # deinit() # uncomment this line on Windows
+  # deinit() # uncomment this line on Windows
 
 if __name__ == "__main__":
     main()
